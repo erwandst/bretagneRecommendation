@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Bretagne</title>
+<link rel="stylesheet" href="./travel_recommendation.css" />
+</head>
+<body>
+    <!-- Barre de navigation en haut -->
+    <nav>
+        <h1>TravelBloom</h1>
+        <ul>
+            <li><a href="./travel_recommendation.html" id="home">Home</a></li>
+            <li><a href="./about.html" id="about">About Us</a></li>
+            <li><a href="./contact.html" id="contact">Contact Us</a></li>
+        </ul>
+        <!-- Formulaire de recherche -->
+        <form id="searchForm" onsubmit="return false;" style="display: flex; align-items: center;">
+            <input type="text" id="searchInput" placeholder="Enter a destination or keyword 🔍" />
+            <button type="button" onclick="executeSearch()">Search</button>
+            <button type="button" onclick="clearSearch()">Clear</button>
+        </form>        
+    </nav>
+
+    <!-- Barre de réseaux sociaux à gauche -->
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" title="Facebook">
+            <img src="facebook.png" alt="Facebook" class="social-icon" />
+        </a>
+        <a href="https://twitter.com" target="_blank" title="Twitter">
+            <img src="twitter.png" alt="Twitter" class="social-icon" />
+        </a>
+        <a href="https://instagram.com" target="_blank" title="Instagram">
+            <img src="instagram.png" alt="Instagram" class="social-icon" />
+        </a>
+        <a href="https://youtube.com" target="_blank" title="YouTube">
+            <img src="youtube.png" alt="YouTube" class="social-icon" />
+        </a>
+    </div>
+
+    <!-- Zone principale avec image et texte -->
+    <section class="intro">
+        <h1>EXPLORE DREAM DESTINATION</h1>
+        <p>Explore Brittany !</p>
+    </section>
+
+    <script>
+        function executeSearch() {
+            const query = document.getElementById('searchInput').value;
+            alert('Searching for: ' + query);
+        }
+        function clearSearch() {
+            document.getElementById('searchInput').value = '';
+            alert('Search cleared.');
+        }
+    </script>
+</body>
+</html>

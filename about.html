@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>About Us - TravelBloom</title>
+<link rel="stylesheet" href="./travel_recommendation.css" />
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <h1>TravelBloom</h1>
+  <ul>
+    <li><a href="./travel_recommendation.html" id="home">Home</a></li>
+    <li><a href="./about.html" id="about">About Us</a></li>
+    <li><a href="./contact.html" id="contact">Contact Us</a></li>
+  </ul>
+  <!-- Formulaire de recherche -->
+  <form id="searchForm" onsubmit="return false;" style="display: flex; align-items: center;">
+    <input type="text" id="searchInput" placeholder="Enter a destination or keyword 🔍" />
+    <button type="button" onclick="executeSearch()">Search</button>
+    <button type="button" onclick="clearSearch()">Clear</button>
+  </form>
+</nav>
+
+<!-- Contenu About Us -->
+<div class="about-container">
+  <!-- Présentation de l'entreprise -->
+  <section class="company-info">
+    <h2>About Our Company</h2>
+    <p>
+      Welcome to TravelBloom! We are a team of passionate travel enthusiasts dedicated to providing excellent services and personalized travel experiences around the world. Our mission is to help you discover new destinations and create unforgettable memories. We value integrity, innovation, and customer satisfaction, working together to achieve our goals.
+    </p>
+  </section>
+
+  <!-- Présentation de l'équipe -->
+  <section class="team">
+    <!-- Membre 1 -->
+    <div class="member">
+      <img src="profil.png" alt="John Doe" />
+      <h3>John Doe</h3>
+      <p>CEO - Responsible for overall company strategy and vision.</p>
+    </div>
+    <!-- Membre 2 -->
+    <div class="member">
+      <img src="profil.png" alt="Celina Thomas" />
+      <h3>Celina Thomas</h3>
+      <p>Team Lead - Leads the technical and operations team.</p>
+    </div>
+    <!-- Membre 3 -->
+    <div class="member">
+      <img src="profil.png" alt="Mike Tyson" />
+      <h3>Mike Tyson</h3>
+      <p>Delivery Head - Manages project delivery and client relationships.</p>
+    </div>
+  </section>
+</div>
+
+</body>
+</html>

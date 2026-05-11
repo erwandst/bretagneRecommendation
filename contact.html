@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Contact Us - TravelBloom</title>
+<link rel="stylesheet" href="./travel_recommendation.css" />
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+    <h1>TravelBloom</h1>
+    <ul>
+      <li><a href="./travel_recommendation.html" id="home">Home</a></li>
+      <li><a href="./about.html" id="about">About Us</a></li>
+      <li><a href="./contact.html" id="contact">Contact Us</a></li>
+    </ul>
+    <!-- Formulaire de recherche -->
+    <form id="searchForm" onsubmit="return false;" style="display: flex; align-items: center;">
+      <input type="text" id="searchInput" placeholder="Enter a destination or keyword 🔍" />
+      <button type="button" onclick="executeSearch()">Search</button>
+      <button type="button" onclick="clearSearch()">Clear</button>
+    </form>
+  </nav>
+
+<!-- Zone centrale pour le formulaire -->
+<div class="contact-section">
+  <div class="contact-box">
+    <h2>Contact Us</h2>
+    <form onsubmit="return handleSubmit()">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  function handleSubmit() {
+    alert("Thank you for reaching out! We will get back to you soon.");
+    return false;
+  }
+</script>
+
+</body>
+</html>
