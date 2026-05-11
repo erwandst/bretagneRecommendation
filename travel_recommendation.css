@@ -51,8 +51,11 @@ nav ul li a:hover {
 
 /* Style pour la zone de recherche (si tu en as) */
 #searchForm {
-    gap: 5px;
-}
+    display: flex; /* aligner horizontalement */
+    justify-content: flex-end; /* aligner à droite */
+    align-items: center; /* aligner verticalement si besoin */
+    gap: 5px; /* espace entre les éléments */
+  }
 
 /* Style pour la zone principale (intro ou contact) */
 .intro, .contact-section {
