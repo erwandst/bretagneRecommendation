@@ -17,15 +17,28 @@ body {
 
 /* Navbar */
 nav {
-    background-color: #02472d; /* couleur foncée */
-    padding: 15px 20px;
+    background-color: #01311f;
+    padding: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
+    justify-content: space-between; /* pour répartir à gauche et à droite */
+}
+
+/* La section gauche (titre) */
+.nav-left {
+    flex: 1; /* occupe tout l'espace à gauche */
+}
+
+/* La section centrale (formulaire) */
+.nav-center {
+    flex: 1; /* occupe tout l'espace au centre */
+    display: flex;
+    justify-content: center; /* centre le formulaire */
+}
+
+/* La section droite (recherche) */
+.nav-right {
+    flex: 1; /* occupe tout l'espace à droite */
 }
 
 nav h1 {
@@ -36,11 +49,14 @@ nav h1 {
 
 nav ul {
     list-style: none;
-    display: flex;
-    gap: 20px;
 }
 
-nav ul li a {
+nav ul li {
+display: inline;
+margin-right: 10px;
+}
+
+nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -51,27 +67,44 @@ nav ul li a:hover {
 
 /* Style pour la zone de recherche (si tu en as) */
 #searchForm {
-    display: flex; /* aligner horizontalement */
-    justify-content: flex-end; /* aligner à droite */
-    align-items: center; /* aligner verticalement si besoin */
-    gap: 5px; /* espace entre les éléments */
-  }
+    display: flex; /* pour aligner horizontalement */
+    flex-direction: row;
+    align-items: center; /* pour aligner verticalement si besoin */
+    gap: 5px; /* espace entre les éléments, optionnel */
+}
+
+/* Style pour les boutons Search et Clear dans la zone de recherche */
+#searchForm button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    background-color: #006666; /* couleur de fond identique à ton bouton submit, ou change si besoin */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Survol pour ces boutons */
+#searchForm button:hover {
+    background-color: #004d4d;
+}
 
 /* Style pour la zone principale (intro ou contact) */
 .intro, .contact-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: calc(100vh - 60px); /* pour laisser la place pour la nav */
-    padding-top: 80px; /* pour décaler sous la nav */
-    background-color: rgba(255,255,255,0.2); /* semi-transparent */
+    justify-content: left;
+    height: auto;
+    padding-top: 80px;
+    background-color: rgba(255, 255, 255, 0);
     width: 100%;
 }
 
 /* Pour la section contact spécifique */
 .contact-section {
-    height: auto; /* pas besoin de 100vh ici, on veut que ça s'adapte */
+    height: auto;
     padding: 40px 20px;
 }
 

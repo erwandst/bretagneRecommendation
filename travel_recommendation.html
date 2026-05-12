@@ -6,21 +6,22 @@
 <link rel="stylesheet" href="./travel_recommendation.css" />
 </head>
 <body>
-    <!-- Barre de navigation en haut -->
-    <nav>
-        <h1>TravelBloom</h1>
-        <ul>
-            <li><a href="./travel_recommendation.html" id="home">Home</a></li>
-            <li><a href="./about.html" id="about">About Us</a></li>
-            <li><a href="./contact.html" id="contact">Contact Us</a></li>
-        </ul>
-        <!-- Formulaire de recherche -->
-        <form id="searchForm" onsubmit="return false;" style="display: flex; align-items: center;">
-            <input type="text" id="searchInput" placeholder="Enter a destination or keyword 🔍" />
-            <button type="button" onclick="executeSearch()">Search</button>
-            <button type="button" onclick="clearSearch()">Clear</button>
-        </form>        
-    </nav>
+    
+<!-- Navbar -->
+  <nav>
+    <h1>TravelBloom</h1>
+    <ul>
+      <li><a href="./travel_recommendation.html" id="home">Home</a></li>
+      <li><a href="./about.html" id="about">About Us</a></li>
+      <li><a href="./contact.html" id="contact">Contact Us</a></li>
+    </ul>
+    <!-- Formulaire de recherche -->
+    <form id="searchForm" onsubmit="return false;">
+      <input type="text" id="searchInput" placeholder="Enter a destination 🔍"/>
+      <button type="button" onclick="executeSearch()">Search</button>
+      <button type="button" onclick="clearSearch()">Clear</button>
+    </form>
+  </nav>
 
     <!-- Barre de réseaux sociaux à gauche -->
     <div class="social-icons">
