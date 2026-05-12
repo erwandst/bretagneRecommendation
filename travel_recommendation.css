@@ -158,30 +158,30 @@ button[type="submit"]:hover {
 }
 
 /* Style pour le fond d'écran et autres éléments si besoin */
-h1 {
+.intro h1 {
     font-size: 36px;
     color: #fff;
     margin-bottom: 10px;
+    width: 60%;
 }
 
-p {
+.intro p {
     font-size: 20px;
     color: #fff;
+    width: 60%;
 }
 
-/* Icônes réseaux sociaux (si tu en as) */
+/* Icônes réseaux sociaux */
 .social-icons {
     position: fixed;
     top: 50%;
-    left: 20px;
+    left: 10px;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: rgba(255,255,255,0.8);
+    align-items: Left;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
     z-index: 1000;
 }
 
