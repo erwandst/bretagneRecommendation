@@ -45,15 +45,8 @@
         <p>Explore Brittany !</p>
     </section>
 
-    <script>
-        function executeSearch() {
-            const query = document.getElementById('searchInput').value;
-            alert('Searching for: ' + query);
-        }
-        function clearSearch() {
-            document.getElementById('searchInput').value = '';
-            alert('Search cleared.');
-        }
-    </script>
+    <div id="recommendations" style="display: none;"></div>
+
+    <script src="./travel_recommendation.js"></script>
 </body>
 </html>
