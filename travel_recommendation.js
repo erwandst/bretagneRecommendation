@@ -31,36 +31,60 @@ fetch('travel_recommendation_api.json')
     showRecommendations(allItems, document.getElementById('recommendations'));
   });
 
-// Fonction pour afficher tous les éléments
-function showRecommendations(items, container) {
+  function showRecommendations(items, container) {
+
     container.innerHTML = '';
-  
+
     if (items.length === 0) {
-      container.innerHTML = '<p>No results found.</p>';
-      return;
+        container.innerHTML = '<p>No results found.</p>';
+        return;
     }
-  
+
     items.forEach(item => {
-      const card = document.createElement('div');
-      card.className = 'recommendation-card';
-  
-      const img = document.createElement('img');
-      img.src = item.imageUrl;
-      img.alt = item.name;
-  
-      const name = document.createElement('h3');
-      name.textContent = item.name;
-  
-      const desc = document.createElement('p');
-      desc.textContent = item.description;
-  
-      card.appendChild(img);
-      card.appendChild(name);
-      card.appendChild(desc);
-  
-      container.appendChild(card);
+
+        const card = document.createElement('div');
+        card.className = 'recommendation-card';
+
+        const img = document.createElement('img');
+        img.src = item.imageUrl;
+        img.alt = item.name;
+
+        const name = document.createElement('h3');
+        name.textContent = item.name;
+
+        const desc = document.createElement('p');
+        desc.textContent = item.description;
+
+        // Heure locale
+        let localTime = '';
+
+        if (item.timeZone) {
+
+            const options = {
+                timeZone: item.timeZone,
+                hour12: true,
+                hour: 'numeric',
+                minute: 'numeric',
+                second: 'numeric'
+            };
+
+            localTime = new Date().toLocaleTimeString(
+                'en-US',
+                options
+            );
+        }
+
+        const time = document.createElement('p');
+        time.textContent = `Current time: ${localTime}`;
+
+        card.appendChild(img);
+        card.appendChild(name);
+        card.appendChild(desc);
+        card.appendChild(time);
+
+        container.appendChild(card);
     });
-  }
+}
   
 
   function executeSearch() {
@@ -126,3 +150,22 @@ function clearSearch() {
     // Réaffiche la section principale
     document.querySelector('.intro').style.display = 'flex';
 }
+
+const options = {
+    timeZone: item.timeZone,
+    hour12: true,
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric'
+};
+
+const localTime = new Date().toLocaleTimeString(
+    'en-US',
+    options
+);
+
+const time = document.createElement('p');
+
+time.textContent = `Current time: ${localTime}`;
+
+card.appendChild(time);
